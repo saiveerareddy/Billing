@@ -1,0 +1,60 @@
+<head>
+    <link rel="stylesheet" href ="main.css">
+    <img src="https://www.prabhuassociates.com/wp-content/uploads/2022/07/Final-1590x416px.png" alt="prabhu logo">
+</head>
+<!DOCTYPE html>
+<html>
+<head>    
+    <style>
+        body {
+            text-align: right;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .info {
+            margin-left: 20px; /* Add some left margin to the info elements */
+        }
+    </style>
+    <script>
+        function displayDateTime() {
+            // Get the current date and time
+            var currentDateTime = new Date();
+
+            // Extract date, time, and day
+            var date = currentDateTime.toLocaleDateString();
+            var time = currentDateTime.toLocaleTimeString();
+            var day = currentDateTime.toLocaleDateString(undefined, { weekday: 'long' });
+
+            // Display them in the HTML elements with corresponding IDs
+            document.getElementById('date').textContent = date;
+            document.getElementById('time').textContent = time;
+            document.getElementById('day').textContent = day;
+        }
+
+        // Call the function when the page loads
+        window.onload = displayDateTime;
+    </script>
+</head>
+<body>
+    <div class="info">
+        <p>Date: <span id="date"></span></p>
+        <p>Time: <span id="time"></span></p>
+        <p>Day: <span id="day"></span></p>
+    </div>
+</body>
+</html>
+<html>
+<body>
+    <li><button onclick="window.location.href='main1.html';">Brand 1</button></li>
+    <li><button onclick="window.location.href='main2.html';">Brand 2</button></li>
+    <li><button onclick="window.location.href='main3.html';">Brand 3</button></li>
+    <li><button onclick="window.location.href='main4.html';">Brand 4</button></li>
+    <li><button onclick="window.location.href='main5.html';">Brand 5</button></li>
+    <li><button onclick="window.location.href='main6.html';">Brand 6</button></li>
+    
+</body>
+</html>

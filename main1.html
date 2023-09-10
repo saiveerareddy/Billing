@@ -1,0 +1,462 @@
+<head>
+    <link rel="stylesheet" href ="main.css">
+    <img src="https://www.prabhuassociates.com/wp-content/uploads/2022/07/Final-1590x416px.png" alt="prabhu logo">
+</head>
+<!DOCTYPE html>
+<html>
+<head>    
+    <style>
+        body {
+            text-align: right;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .info {
+            margin-left: 20px; /* Add some left margin to the info elements */
+        }
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+</style>
+    </style>
+    <script>
+        function displayDateTime() {
+            // Get the current date and time
+            var currentDateTime = new Date();
+
+            // Extract date, time, and day
+            var date = currentDateTime.toLocaleDateString();
+            var time = currentDateTime.toLocaleTimeString();
+            var day = currentDateTime.toLocaleDateString(undefined, { weekday: 'long' });
+
+            // Display them in the HTML elements with corresponding IDs
+            document.getElementById('date').textContent = date;
+            document.getElementById('time').textContent = time;
+            document.getElementById('day').textContent = day;
+        }
+
+        // Call the function when the page loads
+        window.onload = displayDateTime;
+    </script>
+</head>
+<body>
+    <div class="info">
+        <p>Date: <span id="date"></span></p>
+        <p>Time: <span id="time"></span></p>
+        <p>Day: <span id="day"></span></p>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Serial Number</th>
+            <th>Product</th>
+            <th>Goods In</th>
+            <th>Price per Unit In</th>
+            <th>GST (%)</th>
+            <th>Goods Sold</th>
+            <th>Goods Remaining</th>
+            <th>Total GST</th>
+            <th>Total Price</th> <!-- Changed the column header -->
+            <th>GST + Total Price</th>
+        </tr>
+        <!-- Repeat the following row for each product -->
+        <tr>
+            <td>SN001</td>
+            <td>Product 1</td>
+            <td><input type="number" class="goods-came" value="10"></td>
+            <td><input type="number" class="price-per-unit" value="10.00"></td>
+            <td><input type="number" class="gst" value="5"></td>
+            <td><input type="number" class="goods-sold" value="5"></td>
+            <td><span class="goods-remaining">5</span></td>
+            <td><span class="total-gst">7.50</span></td>
+            <td><span class="total-price">50.00</span></td>
+            <td><span class="total-with-gst">57.50</span></td> <!-- New column for GST + Total Price -->
+        </tr>
+        <tr>
+            <td>SN001</td>
+            <td>Product 1</td>
+            <td><input type="number" class="goods-came" value="10"></td>
+            <td><input type="number" class="price-per-unit" value="10.00"></td>
+            <td><input type="number" class="gst" value="5"></td>
+            <td><input type="number" class="goods-sold" value="5"></td>
+            <td><span class="goods-remaining">5</span></td>
+            <td><span class="total-gst">7.50</span></td>
+            <td><span class="total-price">50.00</span></td>
+            <td><span class="total-with-gst">57.50</span></td> <!-- New column for GST + Total Price -->
+        </tr>
+        <tr>
+            <td>SN001</td>
+            <td>Product 1</td>
+            <td><input type="number" class="goods-came" value="10"></td>
+            <td><input type="number" class="price-per-unit" value="10.00"></td>
+            <td><input type="number" class="gst" value="5"></td>
+            <td><input type="number" class="goods-sold" value="5"></td>
+            <td><span class="goods-remaining">5</span></td>
+            <td><span class="total-gst">7.50</span></td>
+            <td><span class="total-price">50.00</span></td>
+            <td><span class="total-with-gst">57.50</span></td> <!-- New column for GST + Total Price -->
+        </tr>
+        <tr>
+            <td>SN001</td>
+            <td>Product 1</td>
+            <td><input type="number" class="goods-came" value="10"></td>
+            <td><input type="number" class="price-per-unit" value="10.00"></td>
+            <td><input type="number" class="gst" value="5"></td>
+            <td><input type="number" class="goods-sold" value="5"></td>
+            <td><span class="goods-remaining">5</span></td>
+            <td><span class="total-gst">7.50</span></td>
+            <td><span class="total-price">50.00</span></td>
+            <td><span class="total-with-gst">57.50</span></td> <!-- New column for GST + Total Price -->
+        </tr>
+        <tr>
+            <td>SN001</td>
+            <td>Product 1</td>
+            <td><input type="number" class="goods-came" value="10"></td>
+            <td><input type="number" class="price-per-unit" value="10.00"></td>
+            <td><input type="number" class="gst" value="5"></td>
+            <td><input type="number" class="goods-sold" value="5"></td>
+            <td><span class="goods-remaining">5</span></td>
+            <td><span class="total-gst">7.50</span></td>
+            <td><span class="total-price">50.00</span></td>
+            <td><span class="total-with-gst">57.50</span></td> <!-- New column for GST + Total Price -->
+        </tr>
+        <tr>
+            <td>SN001</td>
+            <td>Product 1</td>
+            <td><input type="number" class="goods-came" value="10"></td>
+            <td><input type="number" class="price-per-unit" value="10.00"></td>
+            <td><input type="number" class="gst" value="5"></td>
+            <td><input type="number" class="goods-sold" value="5"></td>
+            <td><span class="goods-remaining">5</span></td>
+            <td><span class="total-gst">7.50</span></td>
+            <td><span class="total-price">50.00</span></td>
+            <td><span class="total-with-gst">57.50</span></td> <!-- New column for GST + Total Price -->
+        </tr>
+        <tr>
+            <td>SN001</td>
+            <td>Product 1</td>
+            <td><input type="number" class="goods-came" value="10"></td>
+            <td><input type="number" class="price-per-unit" value="10.00"></td>
+            <td><input type="number" class="gst" value="5"></td>
+            <td><input type="number" class="goods-sold" value="5"></td>
+            <td><span class="goods-remaining">5</span></td>
+            <td><span class="total-gst">7.50</span></td>
+            <td><span class="total-price">50.00</span></td>
+            <td><span class="total-with-gst">57.50</span></td> <!-- New column for GST + Total Price -->
+        </tr>
+        <tr>
+            <td>SN001</td>
+            <td>Product 1</td>
+            <td><input type="number" class="goods-came" value="10"></td>
+            <td><input type="number" class="price-per-unit" value="10.00"></td>
+            <td><input type="number" class="gst" value="5"></td>
+            <td><input type="number" class="goods-sold" value="5"></td>
+            <td><span class="goods-remaining">5</span></td>
+            <td><span class="total-gst">7.50</span></td>
+            <td><span class="total-price">50.00</span></td>
+            <td><span class="total-with-gst">57.50</span></td> <!-- New column for GST + Total Price -->
+        </tr>
+        <tr>
+            <td>SN001</td>
+            <td>Product 1</td>
+            <td><input type="number" class="goods-came" value="10"></td>
+            <td><input type="number" class="price-per-unit" value="10.00"></td>
+            <td><input type="number" class="gst" value="5"></td>
+            <td><input type="number" class="goods-sold" value="5"></td>
+            <td><span class="goods-remaining">5</span></td>
+            <td><span class="total-gst">7.50</span></td>
+            <td><span class="total-price">50.00</span></td>
+            <td><span class="total-with-gst">57.50</span></td> <!-- New column for GST + Total Price -->
+        </tr>
+        
+        <tr>
+            <td>SN001</td>
+            <td>Product 1</td>
+            <td><input type="number" class="goods-came" value="10"></td>
+            <td><input type="number" class="price-per-unit" value="10.00"></td>
+            <td><input type="number" class="gst" value="5"></td>
+            <td><input type="number" class="goods-sold" value="5"></td>
+            <td><span class="goods-remaining">5</span></td>
+            <td><span class="total-gst">7.50</span></td>
+            <td><span class="total-price">50.00</span></td>
+            <td><span class="total-with-gst">57.50</span></td> <!-- New column for GST + Total Price -->
+        </tr>
+        
+        <tr>
+            <td>SN001</td>
+            <td>Product 1</td>
+            <td><input type="number" class="goods-came" value="10"></td>
+            <td><input type="number" class="price-per-unit" value="10.00"></td>
+            <td><input type="number" class="gst" value="5"></td>
+            <td><input type="number" class="goods-sold" value="5"></td>
+            <td><span class="goods-remaining">5</span></td>
+            <td><span class="total-gst">7.50</span></td>
+            <td><span class="total-price">50.00</span></td>
+            <td><span class="total-with-gst">57.50</span></td> <!-- New column for GST + Total Price -->
+        </tr>
+        
+        <tr>
+            <td>SN001</td>
+            <td>Product 1</td>
+            <td><input type="number" class="goods-came" value="10"></td>
+            <td><input type="number" class="price-per-unit" value="10.00"></td>
+            <td><input type="number" class="gst" value="5"></td>
+            <td><input type="number" class="goods-sold" value="5"></td>
+            <td><span class="goods-remaining">5</span></td>
+            <td><span class="total-gst">7.50</span></td>
+            <td><span class="total-price">50.00</span></td>
+            <td><span class="total-with-gst">57.50</span></td> <!-- New column for GST + Total Price -->
+        </tr>
+        
+        <tr>
+            <td>SN001</td>
+            <td>Product 1</td>
+            <td><input type="number" class="goods-came" value="10"></td>
+            <td><input type="number" class="price-per-unit" value="10.00"></td>
+            <td><input type="number" class="gst" value="5"></td>
+            <td><input type="number" class="goods-sold" value="5"></td>
+            <td><span class="goods-remaining">5</span></td>
+            <td><span class="total-gst">7.50</span></td>
+            <td><span class="total-price">50.00</span></td>
+            <td><span class="total-with-gst">57.50</span></td> <!-- New column for GST + Total Price -->
+        </tr>
+        
+        <tr>
+            <td>SN001</td>
+            <td>Product 1</td>
+            <td><input type="number" class="goods-came" value="10"></td>
+            <td><input type="number" class="price-per-unit" value="10.00"></td>
+            <td><input type="number" class="gst" value="5"></td>
+            <td><input type="number" class="goods-sold" value="5"></td>
+            <td><span class="goods-remaining">5</span></td>
+            <td><span class="total-gst">7.50</span></td>
+            <td><span class="total-price">50.00</span></td>
+            <td><span class="total-with-gst">57.50</span></td> <!-- New column for GST + Total Price -->
+        </tr>
+        
+        <tr>
+            <td>SN001</td>
+            <td>Product 1</td>
+            <td><input type="number" class="goods-came" value="10"></td>
+            <td><input type="number" class="price-per-unit" value="10.00"></td>
+            <td><input type="number" class="gst" value="5"></td>
+            <td><input type="number" class="goods-sold" value="5"></td>
+            <td><span class="goods-remaining">5</span></td>
+            <td><span class="total-gst">7.50</span></td>
+            <td><span class="total-price">50.00</span></td>
+            <td><span class="total-with-gst">57.50</span></td> <!-- New column for GST + Total Price -->
+        </tr>
+        
+        <tr>
+            <td>SN001</td>
+            <td>Product 1</td>
+            <td><input type="number" class="goods-came" value="10"></td>
+            <td><input type="number" class="price-per-unit" value="10.00"></td>
+            <td><input type="number" class="gst" value="5"></td>
+            <td><input type="number" class="goods-sold" value="5"></td>
+            <td><span class="goods-remaining">5</span></td>
+            <td><span class="total-gst">7.50</span></td>
+            <td><span class="total-price">50.00</span></td>
+            <td><span class="total-with-gst">57.50</span></td> <!-- New column for GST + Total Price -->
+        </tr>
+        
+        <tr>
+            <td>SN001</td>
+            <td>Product 1</td>
+            <td><input type="number" class="goods-came" value="10"></td>
+            <td><input type="number" class="price-per-unit" value="10.00"></td>
+            <td><input type="number" class="gst" value="5"></td>
+            <td><input type="number" class="goods-sold" value="5"></td>
+            <td><span class="goods-remaining">5</span></td>
+            <td><span class="total-gst">7.50</span></td>
+            <td><span class="total-price">50.00</span></td>
+            <td><span class="total-with-gst">57.50</span></td> <!-- New column for GST + Total Price -->
+        </tr>
+        
+        <tr>
+            <td>SN001</td>
+            <td>Product 1</td>
+            <td><input type="number" class="goods-came" value="10"></td>
+            <td><input type="number" class="price-per-unit" value="10.00"></td>
+            <td><input type="number" class="gst" value="5"></td>
+            <td><input type="number" class="goods-sold" value="5"></td>
+            <td><span class="goods-remaining">5</span></td>
+            <td><span class="total-gst">7.50</span></td>
+            <td><span class="total-price">50.00</span></td>
+            <td><span class="total-with-gst">57.50</span></td> <!-- New column for GST + Total Price -->
+        </tr>
+        
+        <tr>
+            <td>SN001</td>
+            <td>Product 2</td>
+            <td><input type="number" class="goods-came" value="10"></td>
+            <td><input type="number" class="price-per-unit" value="10.00"></td>
+            <td><input type="number" class="gst" value="5"></td>
+            <td><input type="number" class="goods-sold" value="5"></td>
+            <td><span class="goods-remaining">5</span></td>
+            <td><span class="total-gst">7.50</span></td>
+            <td><span class="total-price">50.00</span></td>
+            <td><span class="total-with-gst">57.50</span></td> <!-- New column for GST + Total Price -->
+        </tr>
+        
+        <tr>
+            <td>SN003</td>
+            <td>Product 1</td>
+            <td><input type="number" class="goods-came" value="10"></td>
+            <td><input type="number" class="price-per-unit" value="10.00"></td>
+            <td><input type="number" class="gst" value="5"></td>
+            <td><input type="number" class="goods-sold" value="5"></td>
+            <td><span class="goods-remaining">5</span></td>
+            <td><span class="total-gst">7.50</span></td>
+            <td><span class="total-price">50.00</span></td>
+            <td><span class="total-with-gst">57.50</span></td> <!-- New column for GST + Total Price -->
+        </tr>
+        
+        <tr>
+            <td>SN001</td>
+            <td>Product 1</td>
+            <td><input type="number" class="goods-came" value="10"></td>
+            <td><input type="number" class="price-per-unit" value="10.00"></td>
+            <td><input type="number" class="gst" value="5"></td>
+            <td><input type="number" class="goods-sold" value="5"></td>
+            <td><span class="goods-remaining">5</span></td>
+            <td><span class="total-gst">7.50</span></td>
+            <td><span class="total-price">50.00</span></td>
+            <td><span class="total-with-gst">57.50</span></td> <!-- New column for GST + Total Price -->
+        </tr>
+        
+        <tr>
+            <td>SN001</td>
+            <td>Product 1</td>
+            <td><input type="number" class="goods-came" value="10"></td>
+            <td><input type="number" class="price-per-unit" value="10.00"></td>
+            <td><input type="number" class="gst" value="5"></td>
+            <td><input type="number" class="goods-sold" value="5"></td>
+            <td><span class="goods-remaining">5</span></td>
+            <td><span class="total-gst">7.50</span></td>
+            <td><span class="total-price">50.00</span></td>
+            <td><span class="total-with-gst">57.50</span></td> <!-- New column for GST + Total Price -->
+        </tr>
+        
+        <tr>
+
+        
+        
+        <!-- Add more product rows as needed -->
+
+    </table>
+
+    <script>
+        const goodsCameInputs = document.querySelectorAll('.goods-came');
+        const pricePerUnitInputs = document.querySelectorAll('.price-per-unit');
+        const gstInputs = document.querySelectorAll('.gst');
+        const goodsSoldInputs = document.querySelectorAll('.goods-sold');
+        const goodsRemainingSpans = document.querySelectorAll('.goods-remaining');
+        const totalGSTSpans = document.querySelectorAll('.total-gst');
+        const totalPriceSpans = document.querySelectorAll('.total-price');
+        const totalWithGSTSpans = document.querySelectorAll('.total-with-gst'); // Updated to select the new column
+
+        // Function to calculate and update goods remaining, total GST, and total price for a single row
+        function updateRowValues(index) {
+            const came = parseFloat(goodsCameInputs[index].value);
+            const pricePerUnit = parseFloat(pricePerUnitInputs[index].value);
+            const gstPercentage = parseFloat(gstInputs[index].value);
+            const sold = parseFloat(goodsSoldInputs[index].value);
+            
+            const gst = (came - sold) * pricePerUnit * (gstPercentage / 100);
+            const remaining = came - sold;
+
+            goodsRemainingSpans[index].textContent = remaining;
+            totalGSTSpans[index].textContent = gst.toFixed(2);
+            const totalPrice = remaining * pricePerUnit;
+            totalPriceSpans[index].textContent = totalPrice.toFixed(2);
+
+            // Calculate and update the new column (GST + Total Price)
+            const totalWithGST = gst + totalPrice;
+            totalWithGSTSpans[index].textContent = totalWithGST.toFixed(2);
+        }
+
+        // Function to update the total GST, total price, and new column (GST + Total Price) for all rows
+        function updateTotalValues() {
+            totalGSTSpans.forEach((span, index) => {
+                updateRowValues(index);
+            });
+        }
+
+        // Add event listeners to input fields
+        goodsCameInputs.forEach((input, index) => {
+            input.addEventListener('input', () => {
+                updateRowValues(index);
+            });
+        });
+
+        pricePerUnitInputs.forEach((input, index) => {
+            input.addEventListener('input', () => {
+                updateRowValues(index);
+            });
+        });
+
+        gstInputs.forEach((input, index) => {
+            input.addEventListener('input', () => {
+                updateRowValues(index);
+            });
+        });
+
+        goodsSoldInputs.forEach((input, index) => {
+            input.addEventListener('input', () => {
+                updateRowValues(index);
+            });
+        });
+
+        // Initial calculation on page load
+        updateTotalValues();
+    </script>
+    <div class="button-container">
+        <button id="resetButton">Reset</button>
+        <button id="saveButton">Save</button>
+    </div>
+</body>
+</html>
