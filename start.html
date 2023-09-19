@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .login-container {
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 100px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="javascript:void(0);" method="post" onsubmit="return auth();">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    
+    <script>
+        function auth(){
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+            if(username === "dbmalipatil" && password === "db@1978"){
+                alert("Login successfully Mr. Dbmalipatil");
+                // Redirect to the main page
+                window.location.href = "pages.html";
+                return true; // Allow the form to submit
+            } else {
+                alert("Invalid username or password. Please try again.");
+                return false; // Prevent the form from submitting
+            }
+        }
+    </script>
+</body>
+</html>
